@@ -35,7 +35,7 @@ all_prods_df.reset_index(drop=True, inplace=True)
 
 # %%
 # Num products to use (subset)
-NUMBER_PRODUCTS = 200
+NUMBER_PRODUCTS = 4000
 
 # Get the first 20000 products
 product_metadata = ( 
@@ -71,7 +71,7 @@ embedding = OpenAIEmbeddings()
 index_name = "products"
  
 # assumes you have a redis stack server running on local host
-redis_url = "redis://localhost:6380"
+redis_url = "redis://localhost:6379"
 
 
 # %%

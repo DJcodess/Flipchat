@@ -1,0 +1,6 @@
+langchain==0.0.263
+openai==0.27.2
+redis==4.6.0
+numpy
+pandas
+tiktoken

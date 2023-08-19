@@ -30,15 +30,17 @@ def chat():
     product_url_match = re.search(r'(https?://[^\s]+)', result["answer"])
     if product_url_match:
         product_url = product_url_match.group(0)
+        result["answer"] = re.sub(re.escape(product_url), '', result["answer"])
     else:
         product_url = None
 
     image_url_match = re.search(r'(https?://[^\s]+)', result["answer"])
     if image_url_match:
         image_url = image_url_match.group(0)
+        result["answer"] = re.sub(re.escape(image_url), '', result["answer"])
     else:
         image_url = None
-
+        
     response = {
         "bot_response": result["answer"],
         "product_info": {

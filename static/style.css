@@ -1,9 +1,7 @@
 body,html{
 	height: 100%;
 	margin: 0;
-	background: rgb(44, 47, 59);
-   background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
-	background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
+	background: linear-gradient(to right, rgb(2, 129, 247), rgb(2, 129, 247));
 }
 
 .chat{
@@ -11,9 +9,9 @@ body,html{
 	margin-bottom: auto;
 }
 .card{
-	height: 500px;
+	height: 40rem;
 	border-radius: 15px !important;
-	background-color: rgba(0,0,0,0.4) !important;
+	background-color: #f0f3f7 !important;
 }
 .contacts_body{
 	padding:  0.75rem 0 !important;
@@ -22,14 +20,16 @@ body,html{
 }
 .msg_card_body{
 	overflow-y: auto;
+  background-color: #f0f3f6 !important; 
 }
 .card-header{
 	border-radius: 15px 15px 0 0 !important;
 	border-bottom: 0 !important;
 }
 .card-footer{
-border-radius: 0 0 15px 15px !important;
+  border-radius: 0 0 15px 15px !important;
 	border-top: 0 !important;
+  background-color: #f0f3f6 !important;
 }
 .container{
 	align-content: center;
@@ -45,33 +45,38 @@ border-radius: 0 0 15px 15px !important;
    outline:0px !important;
 }
 .type_msg{
-	background-color: rgba(0,0,0,0.3) !important;
-	border:0 !important;
-	color:white !important;
+	background-color: rgba(21, 35, 53, 0.8) !important;
+	color: white !important;
 	height: 60px !important;
+  border-radius: 15px 0 0 15px !important;
+  border: 1px solid #ffffff !important;
 	overflow-y: auto;
 }
 	.type_msg:focus{
 	 box-shadow:none !important;
    outline:0px !important;
 }
+
+.type_msg::placeholder{
+  color: #ececec !important;
+}
 .attach_btn{
 	border-radius: 15px 0 0 15px !important;
-	background-color: rgba(0,0,0,0.3) !important;
+	background-color: rgba(21, 35, 53, 0.8) !important;
 	border:0 !important;
 	color: white !important;
 	cursor: pointer;
 }
 .send_btn{
 	border-radius: 0 15px 15px 0 !important;
-	background-color: rgba(0,0,0,0.3) !important;
-	border:0 !important;
+	background-color: rgba(21, 35, 53, 0.8) !important;
+	border: 1px solid #ffffff !important;
 	color: white !important;
 	cursor: pointer;
 }
 .search_btn{
 	border-radius: 0 15px 15px 0 !important;
-	background-color: rgba(0,0,0,0.3) !important;
+	background-color: rgba(200,200,200,0.3) !important;
 	border:0 !important;
 	color: white !important;
 	cursor: pointer;
@@ -91,7 +96,8 @@ border-radius: 0 0 15px 15px !important;
 .user_img{
 	height: 70px;
 	width: 70px;
-	border:1.5px solid #f5f6fa;
+  padding: 0.1rem;
+	/* border:1.5px solid #f5f6fa; */
 
 }
 .user_img_msg{
@@ -126,14 +132,16 @@ border-radius: 0 0 15px 15px !important;
 	margin-top: auto;
 	margin-bottom: auto;
 	margin-left: 15px;
+  font-size: 3rem;
 }
 .user_info span{
-	font-size: 20px;
-	color: white;
+	font-size: 3rem;
+  color: #f9c91a; 
+  font-weight: 700;
 }
 .user_info p{
-	font-size: 10px;
-	color: rgba(255,255,255,0.6);
+	font-size: 1rem;
+	color: #c8c8c8;
 }
 .video_cam{
 	margin-left: 50px;
@@ -150,7 +158,8 @@ border-radius: 0 0 15px 15px !important;
 	margin-bottom: auto;
 	margin-left: 10px;
 	border-radius: 25px;
-	background-color: rgb(82, 172, 255);
+	background-color: #f7a200;
+  color: #152335;
 	padding: 10px;
 	position: relative;
 }
@@ -159,7 +168,8 @@ border-radius: 0 0 15px 15px !important;
 	margin-bottom: auto;
 	margin-right: 10px;
 	border-radius: 25px;
-	background-color: #58cc71;
+	background-color: rgb(2, 129, 247) ;
+  color: white;
 	padding: 10px;
 	position: relative;
 }
@@ -179,6 +189,7 @@ border-radius: 0 0 15px 15px !important;
 }
 .msg_head{
 	position: relative;
+  background-color: #152335 !important;
 }
 #action_menu_btn{
 	position: absolute;
@@ -247,7 +258,7 @@ border-radius: 0 0 15px 15px !important;
 
 /* Style for product image */
 .product-image {
-    max-width: 100px;
+    max-width: 3rem;
     height: auto;
     cursor: pointer;
     border: 2px solid #007bff;

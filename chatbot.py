@@ -29,7 +29,7 @@ Standalone question:"""
 
 condense_question_prompt = PromptTemplate.from_template(template)
 
-template = """You are a friendly, conversational retail shopping assistant. Use the following context including product names, descriptions, image and product URL's to show the shopper whats available, help find what they want, and answer any questions.
+template = """You are a friendly, conversational retail shopping assistant. Use the following context including product names, descriptions, image and product URL's to show the shopper whats available, help find what they want, and answer any questions. Show a single product only.
 It's ok if you don't know the answer, also give reasons for recommending the product which you are about to suggest the customer. Always return the product URL and a single image url of the products you are recommending to the customers.
 
 Context:\"""
