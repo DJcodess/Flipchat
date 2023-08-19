@@ -36,8 +36,8 @@ all_prods_df.reset_index(drop=True, inplace=True)
 # %%
 # Num products to use (subset)
 NUMBER_PRODUCTS = 200
- 
-# Get the first 2500 products
+
+# Get the first 20000 products
 product_metadata = ( 
     all_prods_df
      .head(NUMBER_PRODUCTS)
@@ -54,7 +54,7 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores.redis import Redis as RedisVectorStore
  
 # set your openAI api key as an environment variable
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['OPENAI_API_KEY'] = "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"
  
 # data that will be embedded and converted to vectors
 texts = [
@@ -71,7 +71,7 @@ embedding = OpenAIEmbeddings()
 index_name = "products"
  
 # assumes you have a redis stack server running on local host
-redis_url = "redis://localhost:6379"
+redis_url = "redis://localhost:6380"
 
 
 # %%

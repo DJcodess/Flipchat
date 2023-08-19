@@ -1,8 +1,12 @@
 # app.py
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from chatbot import chatbot
 
 app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template('index.html')
 
 # Create a dictionary to store chat histories
 chat_histories = {}
@@ -21,9 +25,26 @@ def chat():
 
     chat_history.append((result["question"], result["answer"]))
 
+    # Extract product and image URLs from bot's response using regular expressions
+    import re
+    product_url_match = re.search(r'(https?://[^\s]+)', result["answer"])
+    if product_url_match:
+        product_url = product_url_match.group(0)
+    else:
+        product_url = None
+
+    image_url_match = re.search(r'(https?://[^\s]+)', result["answer"])
+    if image_url_match:
+        image_url = image_url_match.group(0)
+    else:
+        image_url = None
+
     response = {
         "bot_response": result["answer"],
-        "chat_history": chat_history
+        "product_info": {
+            "product_url": product_url,
+            "image_url": image_url
+        }
     }
 
     return jsonify(response)
