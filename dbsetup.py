@@ -35,9 +35,9 @@ all_prods_df.reset_index(drop=True, inplace=True)
 
 # %%
 # Num products to use (subset)
-NUMBER_PRODUCTS = 200
+NUMBER_PRODUCTS = 1000
 
-# Get the first 20000 products
+# Get the first 1000 products
 product_metadata = ( 
     all_prods_df
      .head(NUMBER_PRODUCTS)

@@ -25,19 +25,20 @@ def chat():
 
     chat_history.append((result["question"], result["answer"]))
 
-    # Extract product and image URLs from bot's response using regular expressions
+    # # Extract product and image URLs from bot's response using regular expressions
     import re
-    product_url_match = re.search(r'(https?://[^\s]+)', result["answer"])
-    if product_url_match:
-        product_url = product_url_match.group(0)
-    else:
-        product_url = None
 
-    image_url_match = re.search(r'(https?://[^\s]+)', result["answer"])
-    if image_url_match:
-        image_url = image_url_match.group(0)
-    else:
-        image_url = None
+    # Define regular expressions for product URL and image URL with specific keywords
+    product_url_pattern = r'product URL:\s*(https?://[^\s]+)'
+    image_url_pattern = r'image (?:of the )?product:\s*(https?://[^\s]+)'
+
+    # Search for product URL
+    product_url_match = re.search(product_url_pattern, result["answer"])
+    product_url = product_url_match.group(1) if product_url_match else None
+
+    # Search for image URL
+    image_url_match = re.search(image_url_pattern, result["answer"])
+    image_url = image_url_match.group(1) if image_url_match else None
 
     response = {
         "bot_response": result["answer"],
