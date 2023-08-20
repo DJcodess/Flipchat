@@ -90,12 +90,10 @@
 						$("#messageFormeight").append($.parseHTML(botHtml));
 		
 						// Check if product info is available and display it
-						if (productInfo && productInfo.product_url && productInfo.image_url) {
+						if (productInfo && productInfo.product_url) {
 							var productHtml =
 							'<div class="d-flex justify-content-center align-items-center mb-4 product-box">' +
 							'<a href="' + productInfo.product_url + '" target="_blank" class="product-link">Shop Now</a>' +
-							'<a href="' + productInfo.product_url + '" target="_blank">' +
-							'<img src="' + productInfo.image_url + '" alt="Product Image" class="product-image">' +
 							'</a>' +
 							'</div>';
 		

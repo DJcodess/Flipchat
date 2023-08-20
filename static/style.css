@@ -2,7 +2,6 @@ body,html{
 	height: 100%;
 	margin: 0;
 	background: linear-gradient(to right, rgb(2, 129, 247), rgb(2, 129, 247));
-	/* background-color: #2874f0; */
 }
 
 .chat{

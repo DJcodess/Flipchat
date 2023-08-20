@@ -54,7 +54,7 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores.redis import Redis as RedisVectorStore
  
 # set your openAI api key as an environment variable
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['OPENAI_API_KEY'] = "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"
  
 # data that will be embedded and converted to vectors
 texts = [
@@ -72,7 +72,6 @@ index_name = "products"
  
 # assumes you have a redis stack server running on local host
 redis_url = "redis://localhost:6380"
-
 
 # %%
 vectorstore = RedisVectorStore.from_texts(
