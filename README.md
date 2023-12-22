@@ -2,7 +2,7 @@
 
 ## Overview
 
-This chatbot is designed to provide fashion product recommendations using data from Flipkart's catalog. It utilizes a combination of natural language processing (NLP) and machine learning techniques to understand user preferences and suggest relevant fashion items available on Flipkart's platform.
+This chatbot is designed to provide fashion product recommendations using data from Flipkart's catalog. It utilizes a combination of machine learning techniques and openAI models to understand user preferences and suggest relevant fashion items available on Flipkart's platform.
 
 ## Features
 
